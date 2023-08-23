@@ -36,13 +36,10 @@ const Sidebar = () => {
                         <SidebarItem key={item.href} {...item} />
                     ))}
                     {currentUser && (
-                        <SidebarItem onClick={() => signOut} icon={BiLogOut} label='Logout' />
+                        <SidebarItem onClick={() => signOut()} icon={BiLogOut} label='Logout' />
                     )}
                     <SidebarTweetButton />
                 </div>
-            </div>
-            <div className='pt-10 flex items-center'>
-                {/*<button className='w-full rounded-full bg-[#1D9BF0] p-2 xl:flex hidden text-center'>Tweet</button>*/}
             </div>
         </div>
     )

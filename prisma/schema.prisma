@@ -28,7 +28,7 @@ model User {
 
   post           Post[]
   comments       Comment[]
-  notificatiosns Notifications[]
+  notifications Notifications[]
 }
 
 model Post {

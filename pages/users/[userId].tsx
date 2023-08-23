@@ -7,11 +7,17 @@ import { BiArrowBack } from 'react-icons/bi'
 import { ClipLoader } from 'react-spinners'
 import UserHero from '@/components/UserHero'
 import UserBio from '@/components/UserBio'
+import { useParams, useSearchParams } from 'next/navigation'
 
 const UserView = () => {
     const router = useRouter()
-    const { userId } = router.query
 
+    const searchParams = useSearchParams()
+
+    //const userId = searchParams.get('userId')
+
+    const { userId } = router.query
+    
     const { data: fetchedUser, isLoading } = useUser(userId as string)
 
     /* if (isLoading || !fetchedUser) {
@@ -26,6 +32,7 @@ const UserView = () => {
             <Header icon={BiArrowBack} label={fetchedUser?.name} />
             <UserHero userId={userId as string} />
             <UserBio userId={userId as string} />
+            
         </div>
     )
 }

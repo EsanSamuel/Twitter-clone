@@ -24,7 +24,7 @@ const Avatar = ({ userId, isLarge, hasBorder,isSmall }: Props) => {
     }, [router, userId])
     return (
         <div className={`
-        ${hasBorder ? 'border-b border-black' : ''}
+        ${hasBorder ? 'border-5 border-[#13131a]' : ''}
         ${isLarge ? 'h-[120px] w-[120px]' : 'h-[50px] w-[50px]'}
        
         rounded-full hover:opacity-90 transition cursor-pointer relative
